@@ -21,7 +21,11 @@ func _ready():
 		room.hide_left_door = !rooms.has(room_pos + Vector2i.LEFT)
 		room.hide_up_door = !rooms.has(room_pos + Vector2i.UP)
 		room.update_doors()
+		room.set_holes()
 
+
+# func gen_rooms():
+	
 
 func move_camera(direction):
 	

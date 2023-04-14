@@ -2,22 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://ckan5lwiqvq2a" path="res://top-down-shooter-core/character/character.tscn" id="1_4ld63"]
 [ext_resource type="Script" path="res://tiny_wizard/player/player_character.gd" id="2_q71sv"]
-[ext_resource type="Resource" path="res://tiny_wizard/player/player_stats.tres" id="3_4j7bh"]
+[ext_resource type="Resource" uid="uid://bx4cpu32gty6d" path="res://tiny_wizard/player/player_stats.tres" id="3_4j7bh"]
 [ext_resource type="Resource" uid="uid://bpvgw7v25bbsx" path="res://tiny_wizard/player/inventory/inventory.tres" id="4_ubej3"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/physics_stats.gd" id="5_mb7yt"]
 [ext_resource type="Script" path="res://tiny_wizard/player/character_visual.gd" id="5_phrov"]
-[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="6_rdbn7"]
-[ext_resource type="PackedScene" path="res://tiny_wizard/player/weapon/arrow_shooter.tscn" id="9_8ad45"]
-[ext_resource type="Texture2D" uid="uid://2b78raawfdem" path="res://tiny_wizard/assets/art/playerface.png" id="9_d0foh"]
-[ext_resource type="Texture2D" uid="uid://baeahixk6m5pn" path="res://tiny_wizard/assets/art/playerbody.png" id="9_qqu0i"]
+[ext_resource type="Texture2D" uid="uid://bqd1uum441ljk" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="6_rdbn7"]
+[ext_resource type="PackedScene" uid="uid://bqdmmt2bdsek2" path="res://tiny_wizard/player/weapon/arrow_shooter.tscn" id="9_8ad45"]
+[ext_resource type="Texture2D" uid="uid://bfk6uh6b7py6m" path="res://tiny_wizard/assets/art/playerface.png" id="9_d0foh"]
+[ext_resource type="Texture2D" uid="uid://b1ac0rwxs01uv" path="res://tiny_wizard/assets/art/playerbody.png" id="9_qqu0i"]
 [ext_resource type="Script" path="res://tiny_wizard/player/player_input.gd" id="10_fjnx3"]
-[ext_resource type="Texture2D" uid="uid://bp5dn2pv8ujkv" path="res://tiny_wizard/assets/art/hat.png" id="10_vqe68"]
+[ext_resource type="Texture2D" uid="uid://dxjbwe65frts" path="res://tiny_wizard/assets/art/hat.png" id="10_vqe68"]
 
 [sub_resource type="Resource" id="Resource_h2g7o"]
 script = ExtResource("5_mb7yt")
 max_speed = 200.0
 acceleration = 0.4
-friction = 0.19
+friction = 0.2
 impulse_force = 0.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vl2b"]
@@ -158,27 +158,126 @@ region = Rect2(690, 115, 115, 115)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_82bv6"]
 animations = [{
-"frames": [SubResource("AtlasTexture_qoe08")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoe08")
+}],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }, {
-"frames": [SubResource("AtlasTexture_ejc0j"), SubResource("AtlasTexture_et6nd"), SubResource("AtlasTexture_dpr67"), SubResource("AtlasTexture_j2flx"), SubResource("AtlasTexture_x1bgx"), SubResource("AtlasTexture_dl5mx"), SubResource("AtlasTexture_rsgtw"), SubResource("AtlasTexture_gdgks")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejc0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et6nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpr67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2flx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1bgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl5mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsgtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdgks")
+}],
 "loop": true,
 "name": &"move_0",
 "speed": 8.0
 }, {
-"frames": [SubResource("AtlasTexture_5qpn8"), SubResource("AtlasTexture_dnyfi"), SubResource("AtlasTexture_v8k71"), SubResource("AtlasTexture_ynoei"), SubResource("AtlasTexture_a6nu2"), SubResource("AtlasTexture_1op47"), SubResource("AtlasTexture_2sg87"), SubResource("AtlasTexture_567om")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qpn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnyfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8k71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynoei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6nu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1op47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sg87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_567om")
+}],
 "loop": true,
 "name": &"move_1",
 "speed": 8.0
 }, {
-"frames": [SubResource("AtlasTexture_8145b"), SubResource("AtlasTexture_8c1xm"), SubResource("AtlasTexture_qff0r"), SubResource("AtlasTexture_7p00g"), SubResource("AtlasTexture_uf74h"), SubResource("AtlasTexture_qmraf"), SubResource("AtlasTexture_j1h58"), SubResource("AtlasTexture_jvs2o")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8145b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8c1xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qff0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7p00g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uf74h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmraf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1h58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvs2o")
+}],
 "loop": true,
 "name": &"move_2",
 "speed": 8.0
 }, {
-"frames": [SubResource("AtlasTexture_dwith"), SubResource("AtlasTexture_0xjdu"), SubResource("AtlasTexture_15n00"), SubResource("AtlasTexture_i2qo0"), SubResource("AtlasTexture_6sfgb"), SubResource("AtlasTexture_kijl4"), SubResource("AtlasTexture_jacnp"), SubResource("AtlasTexture_ckp4n")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwith")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xjdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15n00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2qo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sfgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kijl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jacnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckp4n")
+}],
 "loop": true,
 "name": &"move_3",
 "speed": 8.0
@@ -222,27 +321,54 @@ region = Rect2(0, 150, 115, 150)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4hf5w"]
 animations = [{
-"frames": [SubResource("AtlasTexture_xihq5")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xihq5")
+}],
 "loop": false,
 "name": &"default",
 "speed": 5.0
 }, {
-"frames": [SubResource("AtlasTexture_swosm"), SubResource("AtlasTexture_84eai")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swosm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84eai")
+}],
 "loop": false,
 "name": &"shoot_0",
 "speed": 2.8
 }, {
-"frames": [SubResource("AtlasTexture_oyfx1"), SubResource("AtlasTexture_63xj4")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyfx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63xj4")
+}],
 "loop": false,
 "name": &"shoot_1",
 "speed": 2.8
 }, {
-"frames": [SubResource("AtlasTexture_700x6"), SubResource("AtlasTexture_ojmtr")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_700x6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojmtr")
+}],
 "loop": false,
 "name": &"shoot_2",
 "speed": 2.8
 }, {
-"frames": [SubResource("AtlasTexture_8rjxh"), SubResource("AtlasTexture_6xiw1")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rjxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xiw1")
+}],
 "loop": false,
 "name": &"shoot_3",
 "speed": 2.8
@@ -286,8 +412,8 @@ _data = {
 }
 
 [node name="Character" instance=ExtResource("1_4ld63")]
-scale = Vector2(0.6, 0.6)
 y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
 collision_layer = 2
 collision_mask = 97
 script = ExtResource("2_q71sv")
@@ -306,21 +432,21 @@ script = ExtResource("5_phrov")
 
 [node name="Shadow" type="Sprite2D" parent="Visual" index="0"]
 modulate = Color(1, 1, 1, 0.533333)
+z_index = -1
 position = Vector2(0.833333, -0.833332)
 scale = Vector2(0.504386, 0.509259)
-z_index = -1
 texture = ExtResource("6_rdbn7")
 
 [node name="Body" type="AnimatedSprite2D" parent="Visual" index="1"]
 position = Vector2(-2.38419e-07, -40)
-frames = SubResource("SpriteFrames_82bv6")
+sprite_frames = SubResource("SpriteFrames_82bv6")
 animation = &"move_0"
 speed_scale = 1.75
 offset = Vector2(3.5, 1.5)
 
 [node name="Head" type="AnimatedSprite2D" parent="Visual" index="2"]
 position = Vector2(0, -101.667)
-frames = SubResource("SpriteFrames_4hf5w")
+sprite_frames = SubResource("SpriteFrames_4hf5w")
 animation = &"shoot_3"
 speed_scale = 2.0
 

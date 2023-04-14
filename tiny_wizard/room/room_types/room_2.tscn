@@ -5,12 +5,12 @@
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="3_opten"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/physics_stats.gd" id="4_rhwwk"]
 
-[sub_resource type="Resource" id="Resource_5kpmg"]
+[sub_resource type="Resource" id="Resource_ub4xa"]
 resource_local_to_scene = true
 script = ExtResource("3_opten")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_1gfsp"]
+[sub_resource type="Resource" id="Resource_yqt8g"]
 resource_local_to_scene = true
 script = ExtResource("4_rhwwk")
 max_speed = 75.0
@@ -18,12 +18,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_2cwfj"]
+[sub_resource type="Resource" id="Resource_21p3k"]
 resource_local_to_scene = true
 script = ExtResource("3_opten")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_8gqxl"]
+[sub_resource type="Resource" id="Resource_sysvh"]
 resource_local_to_scene = true
 script = ExtResource("4_rhwwk")
 max_speed = 75.0
@@ -31,12 +31,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_unumj"]
+[sub_resource type="Resource" id="Resource_gdwib"]
 resource_local_to_scene = true
 script = ExtResource("3_opten")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_6f13c"]
+[sub_resource type="Resource" id="Resource_ejri3"]
 resource_local_to_scene = true
 script = ExtResource("4_rhwwk")
 max_speed = 75.0
@@ -44,12 +44,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_bnjyu"]
+[sub_resource type="Resource" id="Resource_yml5v"]
 resource_local_to_scene = true
 script = ExtResource("3_opten")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_65m3g"]
+[sub_resource type="Resource" id="Resource_tcucy"]
 resource_local_to_scene = true
 script = ExtResource("4_rhwwk")
 max_speed = 75.0
@@ -61,23 +61,23 @@ impulse_force = 500.0
 
 [node name="BlackFly" parent="Enemies" index="0" instance=ExtResource("2_htb2l")]
 position = Vector2(680, 232)
-character_stats = SubResource("Resource_5kpmg")
-physics_stats = SubResource("Resource_1gfsp")
+character_stats = SubResource("Resource_ub4xa")
+physics_stats = SubResource("Resource_yqt8g")
 
 [node name="BlackFly2" parent="Enemies" index="1" instance=ExtResource("2_htb2l")]
 position = Vector2(736, 296)
-character_stats = SubResource("Resource_2cwfj")
-physics_stats = SubResource("Resource_8gqxl")
+character_stats = SubResource("Resource_21p3k")
+physics_stats = SubResource("Resource_sysvh")
 
 [node name="BlackFly3" parent="Enemies" index="2" instance=ExtResource("2_htb2l")]
 position = Vector2(680, 352)
-character_stats = SubResource("Resource_unumj")
-physics_stats = SubResource("Resource_6f13c")
+character_stats = SubResource("Resource_gdwib")
+physics_stats = SubResource("Resource_ejri3")
 
 [node name="BlackFly4" parent="Enemies" index="3" instance=ExtResource("2_htb2l")]
 position = Vector2(776, 232)
-character_stats = SubResource("Resource_bnjyu")
-physics_stats = SubResource("Resource_65m3g")
+character_stats = SubResource("Resource_yml5v")
+physics_stats = SubResource("Resource_tcucy")
 
 [node name="TileMap" parent="." index="6"]
 position = Vector2(8, 25)

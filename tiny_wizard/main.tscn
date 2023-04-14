@@ -68,3 +68,5 @@ anchor_mode = 0
 
 [node name="GUI" parent="Camera2D" instance=ExtResource("13_ucw2f")]
 inventory = ExtResource("14_ui8tp")
+
+[connection signal="shoot" from="Character" to="Character/Visual/DistanceWeapon" method="shoot" flags=18]

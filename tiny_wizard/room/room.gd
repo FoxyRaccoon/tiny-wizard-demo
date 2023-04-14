@@ -23,6 +23,7 @@ const CLOSED_DOORS = [
 
 const PLAYER_CHARACTER = preload("res://tiny_wizard/player/player_character.tscn")
 const GUI_SCENE = preload("res://tiny_wizard/gui/gui.tscn")
+const HOLE_AREA = preload("res://foxyraccoon_tiny_wizard/world/hole_area.tscn")
 
 @onready var doors = [
 	$RoomWalls/RightDoor,
@@ -46,6 +47,8 @@ const GUI_SCENE = preload("res://tiny_wizard/gui/gui.tscn")
 
 var room_pos := Vector2i.ZERO
 
+var ice_floor := false
+
 signal door_entered(direction)
 
 func _ready():
@@ -59,6 +62,8 @@ func _ready():
 		var gui = GUI_SCENE.instantiate()
 		add_child(gui)
 		player_node.gui_path = gui.get_path()
+		set_holes()
+
 
 # Get the position of the room on the level matrix: (0,0), (0,1)...
 func get_room_matrix_position()->Vector2i:
@@ -78,6 +83,14 @@ func update_doors():
 	if hide_down_door: _hide_door(Direction.DOWN)
 	if hide_left_door: _hide_door(Direction.LEFT)
 	if hide_up_door: _hide_door(Direction.UP)
+
+func set_holes():
+	for tile in $TileMap.get_used_cells(0):
+		var tile_id = $TileMap.get_cell_atlas_coords(0,tile)
+		if tile_id.x !=4:
+			var hole = HOLE_AREA.instantiate()
+			hole.position = (tile * 63) + Vector2i(40,50)
+			add_child(hole)
 
 func get_spawning_point(direction):
 	var dir = Direction.UP
@@ -100,6 +113,14 @@ func enter_room():
 		# Close doors
 		for d in [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]:
 			close_door(d)
+	if ice_floor:
+		get_node("../../Character").physics_stats.friction = 0.02
+		$RoomWalls.modulate = Color(0, 1, 1)
+		$TileMap.modulate = Color(0, 1, 1)
+	else:
+		get_node("../../Character").physics_stats.friction = 0.2
+		$RoomWalls.modulate = Color(1, 1, 1)
+		$TileMap.modulate = Color(1, 1, 1)
 
 func enter_door(_body, door_direction):
 	door_entered.emit(door_direction)

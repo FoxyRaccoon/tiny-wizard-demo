@@ -21,6 +21,10 @@ window/size/viewport_width=1024
 window/size/viewport_height=800
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="tiny-wizard-demo"
+
 [input]
 
 player_up={
