@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://lns0ndx3ni3d"]
+
+[ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/interactable_object.gd" id="1_3hn5m"]
+[ext_resource type="Script" path="res://Buy.gd" id="2_ujnt8"]
+[ext_resource type="Script" path="res://foxyraccoon_tiny_wizard/world/GoShop.gd" id="3_h3dgk"]
+[ext_resource type="Texture2D" uid="uid://ckhlfwwjvcf00" path="res://foxyraccoon_tiny_wizard/assets/art/shop.png" id="4_50mni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_682uu"]
+size = Vector2(60, 60)
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_3hn5m")
+
+[node name="Action" type="Node2D" parent="."]
+script = ExtResource("2_ujnt8")
+
+[node name="InteractMechanic" type="Node2D" parent="."]
+script = ExtResource("3_h3dgk")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_682uu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_50mni")
+
+[connection signal="body_entered" from="Area2D" to="InteractMechanic" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="InteractMechanic" method="_on_area_2d_body_exited"]

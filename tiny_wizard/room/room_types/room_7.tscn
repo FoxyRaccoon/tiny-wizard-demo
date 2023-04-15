@@ -5,12 +5,12 @@
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="3_bk2rq"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/physics_stats.gd" id="4_b4eal"]
 
-[sub_resource type="Resource" id="Resource_vkqm6"]
+[sub_resource type="Resource" id="Resource_kgwq0"]
 resource_local_to_scene = true
 script = ExtResource("3_bk2rq")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_dxvll"]
+[sub_resource type="Resource" id="Resource_mi1hx"]
 resource_local_to_scene = true
 script = ExtResource("4_b4eal")
 max_speed = 90.0
@@ -18,12 +18,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_847to"]
+[sub_resource type="Resource" id="Resource_dia8u"]
 resource_local_to_scene = true
 script = ExtResource("3_bk2rq")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_andfy"]
+[sub_resource type="Resource" id="Resource_nkgg4"]
 resource_local_to_scene = true
 script = ExtResource("4_b4eal")
 max_speed = 90.0
@@ -31,12 +31,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_2o21i"]
+[sub_resource type="Resource" id="Resource_gpgh5"]
 resource_local_to_scene = true
 script = ExtResource("3_bk2rq")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_77tc8"]
+[sub_resource type="Resource" id="Resource_xc5tp"]
 resource_local_to_scene = true
 script = ExtResource("4_b4eal")
 max_speed = 90.0
@@ -44,12 +44,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_kb438"]
+[sub_resource type="Resource" id="Resource_x46p8"]
 resource_local_to_scene = true
 script = ExtResource("3_bk2rq")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_rwcv0"]
+[sub_resource type="Resource" id="Resource_o3b5k"]
 resource_local_to_scene = true
 script = ExtResource("4_b4eal")
 max_speed = 90.0
@@ -57,12 +57,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_s64q8"]
+[sub_resource type="Resource" id="Resource_425l3"]
 resource_local_to_scene = true
 script = ExtResource("3_bk2rq")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_q360p"]
+[sub_resource type="Resource" id="Resource_pu5b3"]
 resource_local_to_scene = true
 script = ExtResource("4_b4eal")
 max_speed = 90.0
@@ -74,7 +74,7 @@ impulse_force = 500.0
 script = ExtResource("3_bk2rq")
 max_life = 6
 
-[sub_resource type="Resource" id="Resource_t3alx"]
+[sub_resource type="Resource" id="Resource_85a1x"]
 resource_local_to_scene = true
 resource_name = "SpecialRedFlyPS"
 script = ExtResource("4_b4eal")
@@ -87,35 +87,35 @@ impulse_force = 350.0
 
 [node name="RedFly" parent="Enemies" index="0" instance=ExtResource("2_e0ixt")]
 position = Vector2(485, 306)
-character_stats = SubResource("Resource_vkqm6")
-physics_stats = SubResource("Resource_dxvll")
+character_stats = SubResource("Resource_kgwq0")
+physics_stats = SubResource("Resource_mi1hx")
 
 [node name="RedFly2" parent="Enemies" index="1" instance=ExtResource("2_e0ixt")]
 position = Vector2(540, 304)
-character_stats = SubResource("Resource_847to")
-physics_stats = SubResource("Resource_andfy")
+character_stats = SubResource("Resource_dia8u")
+physics_stats = SubResource("Resource_nkgg4")
 
 [node name="RedFly3" parent="Enemies" index="2" instance=ExtResource("2_e0ixt")]
 position = Vector2(510, 258)
-character_stats = SubResource("Resource_2o21i")
-physics_stats = SubResource("Resource_77tc8")
+character_stats = SubResource("Resource_gpgh5")
+physics_stats = SubResource("Resource_xc5tp")
 
 [node name="RedFly4" parent="Enemies" index="3" instance=ExtResource("2_e0ixt")]
 position = Vector2(512, 356)
-character_stats = SubResource("Resource_kb438")
-physics_stats = SubResource("Resource_rwcv0")
+character_stats = SubResource("Resource_x46p8")
+physics_stats = SubResource("Resource_o3b5k")
 
 [node name="RedFly5" parent="Enemies" index="4" instance=ExtResource("2_e0ixt")]
 position = Vector2(921, 122)
-character_stats = SubResource("Resource_s64q8")
-physics_stats = SubResource("Resource_q360p")
+character_stats = SubResource("Resource_425l3")
+physics_stats = SubResource("Resource_pu5b3")
 
 [node name="RedFly6" parent="Enemies" index="5" instance=ExtResource("2_e0ixt")]
 modulate = Color(1, 0, 0.509804, 1)
 position = Vector2(921, 499)
 scale = Vector2(0.8, 0.8)
 character_stats = SubResource("Resource_1beyd")
-physics_stats = SubResource("Resource_t3alx")
+physics_stats = SubResource("Resource_85a1x")
 
 [node name="Visual" parent="Enemies/RedFly6" index="0"]
 modulate = Color(0.52549, 0.309804, 1, 1)

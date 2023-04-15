@@ -7,6 +7,7 @@ extends QuiverBullet
 var _freed := false
 
 func _ready():
+	$AnimatedSprite2D.modulate = Color(1, 1.0/get_parent().get_node("Character").bullet_strength, 1.0/get_parent().get_node("Character").bullet_strength)
 	self.tree_exited.connect(_on_tree_exited)
 
 func _on_tree_exited():

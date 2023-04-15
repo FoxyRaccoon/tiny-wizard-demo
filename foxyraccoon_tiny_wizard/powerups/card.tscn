@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://4xn87iici5wu"]
+
+[ext_resource type="Texture2D" uid="uid://c6vl0yob8my3a" path="res://tiny_wizard/assets/placeholder_art/gui/coin.png" id="1_2mhng"]
+[ext_resource type="Script" path="res://foxyraccoon_tiny_wizard/powerups/card.gd" id="1_3jf5j"]
+
+[node name="Card" type="ColorRect"]
+clip_contents = true
+custom_minimum_size = Vector2(240, 360)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -180.0
+offset_right = 120.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.490196, 0.490196, 0.278431, 1)
+script = ExtResource("1_3jf5j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(240, 360)
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 360.0
+alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+text = "Description"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Prix" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "40"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_2mhng")
+stretch_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Prix" to="." method="_on_prix_pressed"]

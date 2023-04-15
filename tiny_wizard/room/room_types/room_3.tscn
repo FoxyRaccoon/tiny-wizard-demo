@@ -19,4 +19,4 @@ items = [ExtResource("3_1krdd"), ExtResource("3_vpvpb")]
 
 [node name="Chest2" parent="." index="8" instance=ExtResource("4_bwbuu")]
 position = Vector2(604, 320)
-items = [ExtResource("3_1krdd"), ExtResource("5_uwgop"), ExtResource("7_1cdyb")]
+items = [ExtResource("3_1krdd"), ExtResource("5_uwgop"), ExtResource("7_1cdyb"), ExtResource("3_1krdd"), ExtResource("3_1krdd"), ExtResource("3_1krdd"), ExtResource("3_1krdd")]

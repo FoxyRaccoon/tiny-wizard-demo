@@ -12,4 +12,4 @@ layer_0/tile_data = PackedInt32Array(196611, 131072, 3, 131075, 131072, 1, 13107
 
 [node name="Chest" parent="." index="7" instance=ExtResource("3_rxhyj")]
 position = Vector2(503, 323)
-items = [ExtResource("3_u0lwx"), ExtResource("4_sp77y")]
+items = [ExtResource("3_u0lwx"), ExtResource("4_sp77y"), ExtResource("3_u0lwx"), ExtResource("3_u0lwx"), ExtResource("3_u0lwx"), ExtResource("3_u0lwx"), ExtResource("3_u0lwx")]

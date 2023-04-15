@@ -11,6 +11,9 @@ extends MarginContainer
 
 func _ready():
 	(inventory as QuiverInventory).item_changed.connect(self.item_changed)
+	item_changed(load("res://tiny_wizard/items/pickable_bomb/bomb.tres"))
+	item_changed(load("res://tiny_wizard/items/coin/coin.tres"))
+	item_changed(load("res://tiny_wizard/items/key/key.tres"))
 
 func item_changed(item:QuiverItem):
 	if counters.has(item.name):

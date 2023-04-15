@@ -63,6 +63,9 @@ func _ready():
 		add_child(gui)
 		player_node.gui_path = gui.get_path()
 		set_holes()
+		
+	if randf() > 0.8:
+		ice_floor = true
 
 
 # Get the position of the room on the level matrix: (0,0), (0,1)...

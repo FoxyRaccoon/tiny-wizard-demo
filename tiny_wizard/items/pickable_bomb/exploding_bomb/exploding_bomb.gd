@@ -10,7 +10,7 @@ func _ready():
 	self.tree_exited.connect(_on_tree_exited)
 
 func explode():
-	
+	$RigidBody2D/ExplodingArea/CollisionShape2D.shape.radius = get_parent().get_node("Character").bomb_size
 	play_anim()
 	
 	var exploding_area : Area2D = $RigidBody2D/ExplodingArea

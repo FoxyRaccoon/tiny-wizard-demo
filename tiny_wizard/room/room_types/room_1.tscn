@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://8gachgsj3jdx" path="res://tiny_wizard/enemies/red_fly/red_fly.tscn" id="4_5fybu"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/physics_stats.gd" id="4_knq7s"]
 
-[sub_resource type="Resource" id="Resource_pm8y8"]
+[sub_resource type="Resource" id="Resource_a776h"]
 resource_local_to_scene = true
 script = ExtResource("3_opten")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_mh6ji"]
+[sub_resource type="Resource" id="Resource_atild"]
 resource_local_to_scene = true
 script = ExtResource("4_knq7s")
 max_speed = 75.0
@@ -19,12 +19,12 @@ acceleration = 0.4
 friction = 0.1
 impulse_force = 500.0
 
-[sub_resource type="Resource" id="Resource_i5vyh"]
+[sub_resource type="Resource" id="Resource_jxthy"]
 resource_local_to_scene = true
 script = ExtResource("3_opten")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_76yfb"]
+[sub_resource type="Resource" id="Resource_e60d4"]
 resource_local_to_scene = true
 script = ExtResource("4_knq7s")
 max_speed = 75.0
@@ -36,7 +36,7 @@ impulse_force = 500.0
 script = ExtResource("3_opten")
 max_life = 3
 
-[sub_resource type="Resource" id="Resource_yoef2"]
+[sub_resource type="Resource" id="Resource_rikhi"]
 resource_local_to_scene = true
 script = ExtResource("4_knq7s")
 max_speed = 90.0
@@ -48,15 +48,15 @@ impulse_force = 500.0
 
 [node name="BlackFly" parent="Enemies" index="0" instance=ExtResource("2_htb2l")]
 position = Vector2(680, 232)
-character_stats = SubResource("Resource_pm8y8")
-physics_stats = SubResource("Resource_mh6ji")
+character_stats = SubResource("Resource_a776h")
+physics_stats = SubResource("Resource_atild")
 
 [node name="BlackFly2" parent="Enemies" index="1" instance=ExtResource("2_htb2l")]
 position = Vector2(736, 296)
-character_stats = SubResource("Resource_i5vyh")
-physics_stats = SubResource("Resource_76yfb")
+character_stats = SubResource("Resource_jxthy")
+physics_stats = SubResource("Resource_e60d4")
 
 [node name="RedFly" parent="Enemies" index="2" instance=ExtResource("4_5fybu")]
 position = Vector2(792, 328)
 character_stats = SubResource("Resource_qt1ii")
-physics_stats = SubResource("Resource_yoef2")
+physics_stats = SubResource("Resource_rikhi")

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bqsaw7jghbxn4" path="res://top-down-shooter-core/bullets/bullet.tscn" id="1_v0j7v"]
 [ext_resource type="Script" path="res://tiny_wizard/player/weapon/bullet/arrow.gd" id="2_5y2tp"]
-[ext_resource type="Texture2D" uid="uid://cjjugml0purnn" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="4_ajvt1"]
-[ext_resource type="Texture2D" uid="uid://ckcoy8y88yst0" path="res://tiny_wizard/assets/art/violet_arrow.png" id="4_k26la"]
+[ext_resource type="Texture2D" uid="uid://bqd1uum441ljk" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="4_ajvt1"]
+[ext_resource type="Texture2D" uid="uid://dasuogyq04bl1" path="res://tiny_wizard/assets/art/violet_arrow.png" id="4_k26la"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wj2ee"]
 atlas = ExtResource("4_k26la")
