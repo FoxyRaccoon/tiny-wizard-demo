@@ -10,4 +10,5 @@ class_name GameSave
 @export var key : int
 @export var fire_speed : float
 @export var bullet_strength : int
+@export var level : int
 

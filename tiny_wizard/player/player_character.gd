@@ -18,13 +18,12 @@ func _ready():
 		character_stats.max_life = save_res.max_life
 		character_stats.current_life = save_res.current_life
 		character_stats.current_shield = save_res.shield
-		inventory.add_item(load("res://tiny_wizard/items/coin/coin.tres"), 20 + save_res.gold - inventory.get_item_amount(load("res://tiny_wizard/items/coin/coin.tres")))
+		inventory.add_item(load("res://tiny_wizard/items/coin/coin.tres"), save_res.gold - inventory.get_item_amount(load("res://tiny_wizard/items/coin/coin.tres")))
 		inventory.add_item(load("res://tiny_wizard/items/pickable_bomb/bomb.tres"), save_res.bomb - inventory.get_item_amount(load("res://tiny_wizard/items/pickable_bomb/bomb.tres")))
 		inventory.add_item(load("res://tiny_wizard/items/key/key.tres"), save_res.key - inventory.get_item_amount(load("res://tiny_wizard/items/key/key.tres")))
 		bomb_size = save_res.bomb_size
 		fire_speed = save_res.fire_speed
 		bullet_strength = save_res.bullet_strength
-		
 
 func hit(damage:=1, from:=Vector2.ZERO):
 	super.hit(damage, from)
@@ -55,6 +54,7 @@ func save():
 	save_res.bomb_size = bomb_size
 	save_res.fire_speed = fire_speed
 	save_res.bullet_strength = bullet_strength
+	save_res.level = get_parent().level + 1
 	ResourceSaver.save(save_res, "user://save.tres")
 
 
